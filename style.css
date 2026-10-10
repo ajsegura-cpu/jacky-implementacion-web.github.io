@@ -1,72 +1,333 @@
-body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #42565f;
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-header {
-    text-align: center;
-    padding: 40px;
+html {
+    scroll-behavior: smooth;
 }
 
-nav {
-    text-align: center;
-    padding: 15px;
-}
-
-nav a {
-    text-decoration: none;
-    margin: 0 15px;
-    color: #f6f4f4;
-    font-size: 20px;
-}
-
-nav a:hover {
-    color: #cb9031;
-}
-
-section {
-    padding: 30px;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #222020;
-    color: #f6f4f4;
-    margin-top: 60px;
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(224, 226, 227);
+    color: rgb(36, 36, 36);
+    line-height: 1.7;
 }
 
 img {
-    max-width: 50%;
-    border-radius: 10px;
-    height: auto;
     display: block;
-    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+}
+
+p + p {
+    margin-top: 16px;
+}
+
+a {
+    color: #28566b;
+}
+
+a:focus-visible {
+    outline: 3px solid #008080;
+    outline-offset: 5px;
+}
+
+h3 {
+    margin-bottom: 12px;
+}
+
+
+.header {
+    text-align: center;
+    padding: 70px 20px;
+    background: linear-gradient(
+        135deg,
+        rgb(44, 62, 80),
+        rgb(68, 90, 109)
+    );
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+.header h1 {
+    font-size: clamp(28px, 5vw, 44px);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+}
+
+.subtitulo {
+    font-size: 20px;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px;
+    background-color: rgb(68, 90, 109);
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.menu a:hover {
+    background-color: #28566b;
+}
+
+
+.seccion {
+    padding: 50px 24px;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.seccion h2 {
+    color: rgb(44, 62, 80);
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: clamp(24px, 4vw, 30px);
+}
+
+.seccion h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    margin: 12px auto 0;
+    border-radius: 4px;
+    background-color: #008080;
+}
+
+
+.sobre-mi-contenido {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.sobre-mi-contenido .imagen {
+    width: 30%;
+    max-width: 300px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 24px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.texto {
+    flex: 1;
+    min-width: 0;
+    max-width: 650px;
+    text-align: left;
+}
+
+.proyectos-contenedor,
+.habilidades,
+.formacion-contenedor,
+.marketing-contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.marketing-contenedor {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+
+.proyecto-sos {
+    background-color: white;
+    text-align: center;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.proyecto-sos img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.proyecto-sos:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+}
+
+
+.habilidad {
+    background-color: #006c6c;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.habilidad:hover {
+    transform: translateY(-5px);
+    background-color: #005858;
+}
+
+.habilidad p {
+    font-weight: normal;
+}
+
+
+.formacion-tarjeta,
+.marketing-tarjeta {
+    background-color: white;
+    padding: 25px;
+    border-radius: 16px;
+    border-top: 4px solid #008080;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.formacion-tarjeta h3,
+.marketing-tarjeta h3 {
+    color: rgb(44, 62, 80);
+}
+
+
+.botones {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 25px;
+}
+
+.boton {
+    display: inline-block;
+    padding: 12px 22px;
+    background-color: #006c6c;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.boton:hover {
+    background-color: #005858;
+    transform: translateY(-3px);
+}
+
+
+#contacto {
+    text-align: center;
+}
+
+#contacto a,
+.footer a {
+    overflow-wrap: anywhere;
+}
+
+
+.footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #222020;
+    color: #f6f4f4;
+    margin-top: 40px;
+}
+
+.footer a {
+    color: #b4eded;
+}
+
+
+@media (max-width: 900px) {
+    .proyectos-contenedor,
+    .habilidades,
+    .formacion-contenedor {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
 @media (max-width: 600px) {
-    nav a {
-        display: block;
-        margin: 10px 0;
-    }
-    img {
-        max-width: 80%;
-    }
-    section {
-        texdt-align: center;
-        title-align: center;
-        padding: 20px;
+    .header {
+        padding: 45px 20px;
     }
 
-    header {
-        padding: 20px;
+    .subtitulo {
+        font-size: 16px;
     }
 
+    .menu {
+        gap: 6px;
+        padding: 12px;
+    }
+
+    .menu a {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .seccion {
+        padding: 35px 20px;
+    }
+
+    .sobre-mi-contenido {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .sobre-mi-contenido .imagen {
+        width: 75%;
+        max-width: 260px;
+    }
+
+    .texto {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .proyectos-contenedor,
+    .habilidades,
+    .formacion-contenedor,
+    .marketing-contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    .proyecto-sos img {
+        height: 220px;
+    }
 }
 
-h1 {
-    color: #f6f4f4;
-    font-size: 20px;
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none;
+    }
+
+    .proyecto-sos:hover,
+    .habilidad:hover,
+    .boton:hover {
+        transform: none;
+    }
 }
+
