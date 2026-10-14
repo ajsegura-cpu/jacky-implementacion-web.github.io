@@ -9,16 +9,22 @@
 
     <meta
         name="description"
-        content="Conoce el perfil de Jackelinne Segura: gestión empresarial,
-        mercadotecnia digital y formación en transformación digital."
+        content="Conoce el perfil de Jackelinne Segura: gestión empresarial, mercadotecnia digital y formación en transformación digital."
     >
 
+    <!-- Estilos de las animaciones AOS -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/aos@2.3.4/dist/aos.css"
+    >
+
+    <!-- Estilos de mi página -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    
+    <!--======= MENÚ =======-->
     <nav class="menu" aria-label="Menú principal">
         <a href="#inicio">Inicio</a>
         <a href="#sobre-mi">Sobre mí</a>
@@ -29,7 +35,7 @@
         <a href="#contacto">Contacto</a>
     </nav>
 
-    
+    <!--======= INICIO =======-->
     <header id="inicio" class="header">
         <h1>Ana Jackelinne Segura Rodríguez</h1>
 
@@ -47,11 +53,26 @@
             <a href="#proyectos" class="boton">Ver proyectos</a>
             <a href="#contacto" class="boton">Contactarme</a>
         </div>
+
+        <!--======= CONTADOR DE SALUDOS =======-->
+        <div class="interaccion">
+            <p>¡Gracias por visitar mi página!</p>
+
+            <h2 id="contador" aria-live="polite">0</h2>
+
+            <button
+                id="boton-contador"
+                class="boton"
+                type="button"
+            >
+                Enviar un saludo
+            </button>
+        </div>
     </header>
 
     <main>
 
-        
+        <!--======= SOBRE MÍ =======-->
         <section id="sobre-mi" class="seccion">
             <h2>Sobre mí</h2>
 
@@ -90,12 +111,11 @@
             </div>
         </section>
 
-        
+        <!--======= FORMACIÓN ACADÉMICA =======-->
         <section id="formacion" class="seccion">
             <h2>Formación académica</h2>
 
             <div class="formacion-contenedor">
-
                 <article class="formacion-tarjeta">
                     <h3>Licenciatura en Gestión Empresarial</h3>
 
@@ -117,7 +137,9 @@
                 <article class="formacion-tarjeta">
                     <h3>Programación y Transformación Digital</h3>
 
-                    <p><strong>Licenciatura en curso.</strong></p>
+                    <p>
+                        <strong>Licenciatura en curso.</strong>
+                    </p>
 
                     <p>
                         Desarrollo de conocimientos en programación,
@@ -125,16 +147,14 @@
                         digital.
                     </p>
                 </article>
-
             </div>
         </section>
 
-        
+        <!--======= EXPERIENCIA Y HABILIDADES =======-->
         <section id="experiencia" class="seccion">
             <h2>Experiencia y habilidades</h2>
 
             <div class="habilidades">
-
                 <article class="habilidad">
                     <h3>Gestión educativa</h3>
 
@@ -163,7 +183,6 @@
                         clara y seguimiento de acuerdos y responsabilidades.
                     </p>
                 </article>
-
             </div>
 
             <div class="texto" style="margin: 30px auto 0;">
@@ -177,12 +196,11 @@
             </div>
         </section>
 
-        
+        <!--======= MERCADOTECNIA DIGITAL =======-->
         <section id="mercadotecnia" class="seccion">
             <h2>Mercadotecnia digital</h2>
 
             <div class="marketing-contenedor">
-
                 <article class="marketing-tarjeta">
                     <h3>Planeación de campañas</h3>
 
@@ -222,16 +240,14 @@
                         de comunicación y promoción.
                     </p>
                 </article>
-
             </div>
         </section>
 
-        
+        <!--======= PROYECTOS =======-->
         <section id="proyectos" class="seccion">
             <h2>Proyectos</h2>
 
             <div class="proyectos-contenedor">
-
                 <article class="proyecto-sos">
                     <img
                         src="./img/sos.jpeg"
@@ -279,7 +295,6 @@
                         para oficinas y espacios de trabajo.
                     </p>
                 </article>
-
             </div>
 
             <article class="marketing-tarjeta" style="margin-top: 24px;">
@@ -305,7 +320,7 @@
             </article>
         </section>
 
-       
+        <!--======= CONTACTO =======-->
         <section id="contacto" class="seccion">
             <h2>Contacto</h2>
 
@@ -342,6 +357,7 @@
 
     </main>
 
+    <!--======= PIE DE PÁGINA =======-->
     <footer class="footer">
         <p>&copy; 2026 Jackelinne Segura.</p>
 
@@ -349,6 +365,12 @@
             <a href="#inicio">Volver al inicio</a>
         </p>
     </footer>
+
+    <!--======= LIBRERÍA AOS =======-->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <!--======= MI JAVASCRIPT =======-->
+    <script src="./script.js"></script>
 
 </body>
 </html>
